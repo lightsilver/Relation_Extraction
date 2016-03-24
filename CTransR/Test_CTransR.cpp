@@ -128,9 +128,9 @@ public:
     void run()
     {
 
-        FILE* f1 = fopen(("fb_relation2vec"+version).c_str(),"r");
-        FILE* f2 = fopen(("relation2vec"+version).c_str(),"r");
-        FILE* f3 = fopen(("entity2vec"+version).c_str(),"r");
+        FILE* f1 = fopen(("fb_relation2vec."+version).c_str(),"r");
+        FILE* f2 = fopen(("relation2vec."+version).c_str(),"r");
+        FILE* f3 = fopen(("entity2vec."+version).c_str(),"r");
         cout<<relation_num<<' '<<entity_num<<' '<<fb_relation_num<<endl;
         fb_relation_vec.resize(fb_relation_num);
         for (int i=0; i<fb_relation_num;i++)
