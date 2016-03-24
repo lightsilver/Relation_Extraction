@@ -133,7 +133,7 @@ public:
         FILE* f3 = fopen(("entity2vec"+version).c_str(),"r");
         cout<<relation_num<<' '<<entity_num<<' '<<fb_relation_num<<endl;
         fb_relation_vec.resize(fb_relation_num);
-        for (int i=0; i<relation_num;i++)
+        for (int i=0; i<fb_relation_num;i++)
         {
             fb_relation_vec[i].resize(n);
             for (int ii=0; ii<n; ii++)
@@ -281,8 +281,6 @@ public:
 			//if (testid%100==0)
 			//cout<<testid<<":"<<"\t"<<lsum/(testid+1)<<' '<<lp_n/(testid+1)<<' '<<rsum/(testid+1)<<' '<<rp_n/(testid+1)<<"\t"<<lsum_filter/(testid+1)<<' '<<lp_n_filter/(testid+1)<<' '<<rsum_filter/(testid+1)<<' '<<rp_n_filter/(testid+1)<<endl;
 		}
-		cout<<"left:"<<lsum/fb_l.size()<<'\t'<<lp_n/fb_l.size()<<"\t"<<lsum_filter/fb_l.size()<<'\t'<<lp_n_filter/fb_l.size()<<endl;
-		cout<<"right:"<<rsum/fb_r.size()<<'\t'<<rp_n/fb_r.size()<<'\t'<<rsum_filter/fb_r.size()<<'\t'<<rp_n_filter/fb_r.size()<<endl;
 		for (int rel=0; rel<fb_relation_num; rel++)
 		{
 			int num = rel_num[rel];
@@ -290,6 +288,9 @@ public:
 			cout<<"left:"<<lsum_r[rel]/num<<'\t'<<lp_n_r[rel]/num<<"\t"<<lsum_filter_r[rel]/num<<'\t'<<lp_n_filter_r[rel]/num<<endl;
 			cout<<"right:"<<rsum_r[rel]/num<<'\t'<<rp_n_r[rel]/num<<'\t'<<rsum_filter_r[rel]/num<<'\t'<<rp_n_filter_r[rel]/num<<endl;
 		}
+		cout<<"left:"<<lsum/fb_l.size()<<'\t'<<lp_n/fb_l.size()<<"\t"<<lsum_filter/fb_l.size()<<'\t'<<lp_n_filter/fb_l.size()<<endl;
+		cout<<"right:"<<rsum/fb_r.size()<<'\t'<<rp_n/fb_r.size()<<'\t'<<rsum_filter/fb_r.size()<<'\t'<<rp_n_filter/fb_r.size()<<endl;
+
     }
 
 };
