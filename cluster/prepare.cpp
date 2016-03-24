@@ -48,8 +48,8 @@ int main()
 	}
 	fclose(f1);
 	fclose(f2);
-    FILE* f_ent_vec = fopen("../TransE/entity2vec.txt2","r");
-    int vec_size=50;
+    FILE* f_ent_vec = fopen("../TransE/entity2vec.unif","r");
+    int vec_size=100;
     entity_vec.resize(entity_num);
     for (int i=0; i<entity_num;i++)
     {
